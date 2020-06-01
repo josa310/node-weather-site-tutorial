@@ -5,7 +5,7 @@ const ENDPOINT = "http://api.weatherstack.com/current";
 
 const forecast = (latitude, longitude, callback) => {
 
-    const query = `?access_key=${API_KEY}&query=${latitude},${longitude}&units=m`
+    const query = `?access_key=${API_KEY}&query=${latitude},${longitude}&units=m`;
     const url = `${ENDPOINT}${query}`;
 
     request({url, json: true}, (error, {body}) => {
